@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "name": "ts-api-study",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write \"src/**/*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quramy/ts-api-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Quramy/ts-api-study/issues"
+  },
+  "homepage": "https://github.com/Quramy/ts-api-study#readme",
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@types/node": "^13.5.0",
+    "husky": "^4.2.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "ts-jest": "^25.0.0",
+    "typescript": "^3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$",
+      "lib/.*"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!**/testing/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
+  }
+}
